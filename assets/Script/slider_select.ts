@@ -37,7 +37,7 @@ export default class slider_select extends cc.Component {
     onDisable() {
         this.listen_b = false;
         this.node.off("scroll-ended", this._event_scrolling, this);
-        this.node.on(cc.Node.EventType.TOUCH_START, this._event_touch_start, this);
+        this.node.off(cc.Node.EventType.TOUCH_START, this._event_touch_start, this);
         this.node.off(cc.Node.EventType.TOUCH_END, this._event_touch_end_and_cancel, this);
         this.node.off(cc.Node.EventType.TOUCH_CANCEL, this._event_touch_end_and_cancel, this);
     }
